@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aarav &amp; Ananya — 22 November 2026</title>
+<meta name="description" content="Together with our families, we invite you to celebrate our wedding in Orchha, Madhya Pradesh.">
+<meta name="theme-color" content="#17130f">
+<meta property="og:title" content="Aarav &amp; Ananya — 22 November 2026">
+<meta property="og:description" content="An invitation, told in eight frames.">
+<meta property="og:image" content="images/02.webp">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/01.webp" fetchpriority="high">
+
+<script>document.documentElement.classList.add('js')</script>
+
+<style>
+/* ─────────── tokens ─────────── */
+:root{
+  --ink:#17130f;
+  --ink-2:#221b15;
+  --ivory:#f6f1e8;
+  --cream:#ece1cf;
+  --sand:#c9a97f;
+  --gold:#b08a4f;
+  --gold-soft:#cdae7c;
+  --muted:rgba(246,241,232,.62);
+  --muted-ink:rgba(23,19,15,.6);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost','Helvetica Neue',Arial,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --gut:clamp(20px,6vw,80px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--ink);
+  color:var(--ivory);
+  font-family:var(--sans);
+  font-weight:300;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+/* clip, not hidden — `hidden` would make body a scroll container and kill every sticky chapter */
+@supports (overflow:clip){body{overflow-x:clip}}
+html.is-locked,html.is-locked body{overflow:hidden;height:100%}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p{margin:0}
+::selection{background:var(--gold);color:var(--ink)}
+
+/* ─────────── type ─────────── */
+.mark{
+  display:block;
+  font-family:var(--sans);
+  font-size:clamp(9.5px,2.6vw,11px);
+  font-weight:400;
+  letter-spacing:.42em;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+}
+.mark--ink{color:var(--gold)}
+.display{
+  font-family:var(--serif);
+  font-weight:300;
+  font-size:clamp(30px,8.4vw,66px);
+  line-height:1.12;
+  letter-spacing:-.005em;
+}
+.display.sm{font-size:clamp(25px,6.4vw,44px)}
+.body{
+  font-size:clamp(14.5px,3.8vw,17px);
+  line-height:1.78;
+  color:var(--muted);
+  max-width:34ch;
+  font-weight:300;
+}
+.orn{width:clamp(96px,26vw,132px);height:auto;color:var(--gold);display:block}
+
+/* word-split kinetic type */
+.w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em;margin-bottom:-.06em}
+.wi{display:inline-block;will-change:transform}
+.js .wi{transform:translateY(112%)}
+.js .reveal{opacity:0;transform:translateY(26px)}
+
+/* ─────────── chrome (no header / no footer) ─────────── */
+.grain{
+  position:fixed;inset:0;z-index:60;pointer-events:none;
+  opacity:.055;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.progress{
+  position:fixed;top:0;left:0;right:0;height:2px;z-index:55;pointer-events:none;
+  background:rgba(246,241,232,.1);
+}
+body.theme-light .progress{background:rgba(23,19,15,.1)}
+.progress i{
+  display:block;height:100%;width:100%;
+  background:linear-gradient(90deg,var(--gold),var(--gold-soft));
+  transform:scaleX(0);transform-origin:0 50%;
+}
+.badge{
+  position:fixed;z-index:55;pointer-events:none;
+  left:var(--gut);bottom:calc(16px + env(safe-area-inset-bottom));
+  font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;
+  color:rgba(246,241,232,.72);
+  text-shadow:0 1px 14px rgba(0,0,0,.55);
+  transition:color .5s var(--ease),opacity .4s var(--ease);
+}
+body.theme-light .badge{color:rgba(23,19,15,.5);text-shadow:none}
+.badge.is-hidden{opacity:0}
+
+/* ─────────── overture ─────────── */
+.overture{
+  position:fixed;inset:0;z-index:70;
+  background:var(--ivory);color:var(--ink);
+  display:grid;place-items:center;
+}
+.overture__in{text-align:center;padding:0 24px}
+.overture__eyebrow{
+  display:block;font-size:9.5px;letter-spacing:.44em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:22px;opacity:0;
+}
+.overture__mono{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(46px,17vw,104px);line-height:1;
+  display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,20px);
+}
+.overture__mono span{opacity:0;display:block}
+.overture__mono em{
+  font-style:italic;color:var(--gold);
+  font-size:.62em;opacity:0;display:block;
+}
+.overture__rule{
+  width:min(220px,58vw);height:1px;margin:26px auto 0;
+  background:rgba(23,19,15,.14);overflow:hidden;
+}
+.overture__rule i{display:block;height:100%;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:0 50%}
+html.no-anim .overture{display:none}
+
+/* ─────────── shared chapter / media ─────────── */
+.ch{position:relative;min-height:100vh;min-height:100svh}
+/* only the non-sticky chapters may clip — clipping .pause/.expand would break their sticky children */
+.hero,.split,.beat,.close{overflow:hidden}
+.media{
+  position:absolute;inset:0;overflow:hidden;
+  background:linear-gradient(150deg,var(--tone-a,#cbb08d),var(--tone-b,#8c705a));
+}
+.media img{
+  width:100%;height:100%;object-fit:cover;
+  opacity:0;transform:scale(1.015);
+  transition:opacity 1.1s var(--ease),transform 1.4s var(--ease);
+}
+.media img.is-in{opacity:1;transform:scale(1)}
+.media--tall{height:118%;top:-9%}
+
+.scrim{position:absolute;inset:0;pointer-events:none}
+.scrim--bottom{background:linear-gradient(to top,rgba(14,11,9,.9) 0%,rgba(14,11,9,.62) 26%,rgba(14,11,9,.12) 58%,transparent 80%)}
+.scrim--bottom.strong{background:linear-gradient(to top,rgba(14,11,9,.95) 0%,rgba(14,11,9,.74) 32%,rgba(14,11,9,.2) 66%,transparent 88%)}
+.scrim--full{background:radial-gradient(120% 90% at 50% 45%,rgba(14,11,9,.06) 0%,rgba(14,11,9,.5) 62%,rgba(14,11,9,.82) 100%)}
+.scrim--edge{background:linear-gradient(to top,rgba(14,11,9,.82),rgba(14,11,9,.22) 46%,rgba(14,11,9,.42))}
+
+/* ─────────── 01 · hero ─────────── */
+.hero__in{
+  position:absolute;inset:auto 0 0 0;
+  padding:0 var(--gut) calc(clamp(74px,16vh,132px) + env(safe-area-inset-bottom));
+  z-index:2;
+}
+.hero__names{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(46px,15.5vw,132px);
+  line-height:.94;letter-spacing:-.01em;margin:14px 0 0;
+}
+.hero__names .amp{
+  display:block;font-style:italic;color:var(--gold-soft);
+  font-size:.42em;line-height:1;margin:.1em 0 .06em;padding-left:.08em;
+}
+.hero__date{
+  margin-top:clamp(20px,5vw,30px);
+  font-size:clamp(10px,2.9vw,12px);letter-spacing:.3em;text-transform:uppercase;
+  color:rgba(246,241,232,.78);
+}
+.cue{
+  position:absolute;z-index:2;left:var(--gut);
+  bottom:calc(30px + env(safe-area-inset-bottom));
+  display:flex;align-items:center;gap:12px;
+}
+.cue__l{font-size:8.5px;letter-spacing:.36em;text-transform:uppercase;color:rgba(246,241,232,.5)}
+.cue__bar{position:relative;width:52px;height:1px;background:rgba(246,241,232,.22);overflow:hidden}
+.cue__bar i{position:absolute;inset:0;background:var(--gold-soft);transform:translateX(-100%);animation:cue 2.6s var(--ease) infinite}
+@keyframes cue{0%{transform:translateX(-100%)}55%{transform:translateX(0)}100%{transform:translateX(100%)}}
+
+/* ─────────── 02 · split (terrace / left negative space) ─────────── */
+.split__in{
+  position:absolute;inset:auto 0 0 0;z-index:2;
+  padding:0 var(--gut) clamp(60px,14vh,100px);
+  max-width:640px;
+}
+.split__in .display{margin:16px 0 0}
+.split__in .body{margin-top:22px}
+
+/* ─────────── 03 · pause (hands, sticky crossfade) ─────────── */
+.pause{height:230vh;height:230svh;position:relative}
+.pause__stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.pause__lines{
+  position:absolute;inset:0;z-index:2;display:grid;place-items:center;
+  padding:0 clamp(26px,9vw,120px);text-align:center;
+}
+.pause__lines .line{
+  grid-area:1/1;
+  font-family:var(--serif);font-weight:300;font-style:italic;
+  font-size:clamp(23px,6.6vw,48px);line-height:1.34;
+  max-width:24ch;
+}
+.js .line--2{opacity:0}
+
+/* ─────────── 04/05 · beats (portrait full-bleed) ─────────── */
+.beat__in{
+  position:absolute;inset:auto 0 0 0;z-index:2;
+  padding:0 var(--gut) clamp(56px,13vh,96px);
+}
+.beat__in .display{margin:14px 0 0;max-width:20ch}
+.beat__in .body{margin-top:20px}
+
+/* ─────────── 06 · expand (print → full bleed) ─────────── */
+.expand{height:215vh;height:215svh;background:#100d0b}
+.expand__stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;place-items:center}
+.expand__frame{
+  position:absolute;inset:0;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.8);
+  will-change:transform;
+}
+.js .expand__frame{transform:scale(.76)}
+.expand__cap{
+  position:relative;z-index:2;text-align:center;
+  padding:0 clamp(26px,9vw,80px);
+  align-self:end;margin-bottom:clamp(54px,12vh,90px);
+}
+.expand__cap .display{margin-bottom:16px}
+.expand__cap .body{margin:0 auto;color:rgba(246,241,232,.72)}
+
+/* ─────────── 07 · the reel ─────────── */
+.reel{
+  position:relative;min-height:100vh;min-height:100svh;
+  background:#100d0b;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(58px,12vh,84px) 0 clamp(52px,11vh,76px);
+  overflow:hidden;
+}
+.reel__head{padding:0 var(--gut);margin-bottom:clamp(22px,5vh,38px)}
+.reel__head .display{margin:14px 0 0}
+.reel__by{
+  margin-top:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(246,241,232,.52);
+}
+.reel__by strong{color:var(--gold-soft);font-weight:400;letter-spacing:.2em}
+
+.reel__vp{
+  overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.reel__vp::-webkit-scrollbar{display:none}
+.reel__track{display:flex;align-items:center;gap:clamp(12px,3.4vw,30px);padding:0 var(--gut);width:max-content}
+.frame{
+  margin:0;position:relative;scroll-snap-align:center;flex:0 0 auto;
+  height:min(60vh,58svh);
+  display:flex;flex-direction:column;
+}
+.frame__box{
+  flex:1;min-height:0;display:grid;place-items:center;
+  background:rgba(246,241,232,.035);
+  border:1px solid rgba(246,241,232,.07);
+}
+.frame img{
+  max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;
+  opacity:0;transition:opacity 1s var(--ease);
+}
+.frame img.is-in{opacity:1}
+.frame--land{width:min(86vw,1120px)}
+.frame--port{width:min(66vw,560px)}
+.frame figcaption{
+  padding-top:14px;display:flex;align-items:baseline;gap:12px;
+  font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(246,241,232,.55);
+}
+.frame figcaption b{color:var(--gold-soft);font-weight:400;font-variant-numeric:tabular-nums}
+
+.reel__foot{
+  display:flex;align-items:center;gap:16px;
+  padding:clamp(20px,4.6vh,32px) var(--gut) 0;
+}
+.reel__count{
+  font-size:11px;letter-spacing:.24em;color:rgba(246,241,232,.62);
+  font-variant-numeric:tabular-nums;
+}
+.reel__count b{color:var(--gold-soft);font-weight:400}
+.reel__bar{flex:1;height:1px;background:rgba(246,241,232,.14);overflow:hidden;max-width:260px}
+.reel__bar i{display:block;height:100%;background:var(--gold);transform-origin:0 50%;transform:scaleX(.125);transition:transform .45s var(--ease)}
+.reel__hint{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(246,241,232,.4)}
+.reel__hint .d{display:none}
+
+/* ─────────── 08 · the invitation ─────────── */
+.invite{
+  position:relative;background:var(--ivory);color:var(--ink);
+  padding:clamp(72px,16vh,150px) var(--gut);
+}
+.invite::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(90% 60% at 50% 0%,rgba(176,138,79,.09),transparent 70%);
+}
+.invite__card{
+  position:relative;max-width:760px;margin:0 auto;text-align:center;
+  padding:clamp(40px,9vw,76px) clamp(22px,6vw,58px);
+}
+.invite__card::before,.invite__card::after{
+  content:'';position:absolute;width:clamp(26px,7vw,44px);height:clamp(26px,7vw,44px);
+  pointer-events:none;
+}
+.invite__card::before{top:0;left:0;border-top:1px solid var(--gold);border-left:1px solid var(--gold)}
+.invite__card::after{bottom:0;right:0;border-bottom:1px solid var(--gold);border-right:1px solid var(--gold)}
+.invite__names{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(40px,11.5vw,84px);line-height:1;
+  margin:20px 0 0;display:flex;flex-direction:column;align-items:center;
+}
+.invite__names .amp{font-style:italic;color:var(--gold);font-size:.46em;margin:.1em 0}
+.invite__orn{display:flex;justify-content:center;margin:clamp(26px,6vw,38px) 0}
+.invite__say{
+  font-family:var(--serif);font-size:clamp(17px,4.6vw,23px);line-height:1.7;
+  color:rgba(23,19,15,.74);max-width:28ch;margin:0 auto;font-weight:300;
+}
+.invite__when{
+  display:flex;align-items:center;justify-content:center;
+  gap:clamp(14px,4vw,26px);margin:clamp(32px,7vw,48px) 0 0;
+}
+.invite__when i{width:1px;height:clamp(30px,8vw,46px);background:rgba(23,19,15,.18)}
+.invite__when span{
+  font-size:clamp(9.5px,2.7vw,11px);letter-spacing:.28em;text-transform:uppercase;
+  color:rgba(23,19,15,.66);display:block;max-width:7ch;line-height:1.6;
+}
+.invite__d{font-family:var(--serif);font-size:clamp(46px,13vw,88px);line-height:.9;font-weight:300}
+.invite__venue{
+  margin-top:clamp(30px,7vw,42px);
+  font-family:var(--serif);font-size:clamp(20px,5.4vw,30px);line-height:1.4;font-weight:400;
+}
+.invite__venue span{
+  display:block;margin-top:10px;
+  font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--muted-ink);
+}
+.ghost{
+  display:inline-flex;align-items:center;gap:10px;margin-top:26px;
+  min-height:46px;padding:0 26px;
+  border:1px solid rgba(23,19,15,.22);border-radius:999px;
+  font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;
+  transition:border-color .4s var(--ease),background .4s var(--ease),color .4s var(--ease);
+}
+.ghost:hover,.ghost:focus-visible{border-color:var(--gold);background:var(--gold);color:var(--ivory)}
+.ghost svg{width:12px;height:12px;flex:none}
+
+.sched{
+  margin-top:clamp(44px,10vw,66px);
+  border-top:1px solid rgba(23,19,15,.12);
+  display:grid;gap:0;text-align:left;
+}
+.sched__row{
+  display:flex;align-items:baseline;justify-content:space-between;gap:18px;
+  padding:clamp(15px,4vw,20px) 2px;
+  border-bottom:1px solid rgba(23,19,15,.12);
+}
+.sched__n{font-family:var(--serif);font-size:clamp(17px,4.6vw,21px);font-weight:400}
+.sched__t{
+  font-size:clamp(9.5px,2.6vw,10.5px);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted-ink);text-align:right;flex:none;
+}
+.dress{
+  margin-top:clamp(28px,6vw,38px);
+  font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-ink);
+}
+
+/* ─────────── 09 · closing frame + credit ─────────── */
+.close__in{
+  position:absolute;inset:auto 0 0 0;z-index:2;text-align:center;
+  padding:0 var(--gut) calc(clamp(40px,9vh,64px) + env(safe-area-inset-bottom));
+}
+.close__in .display{margin:16px 0 0}
+.close__in .body{margin:20px auto 0;color:rgba(246,241,232,.7)}
+.contacts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 14px;margin-top:26px}
+.contacts a{
+  display:inline-flex;align-items:center;min-height:46px;padding:0 22px;
+  border:1px solid rgba(246,241,232,.26);border-radius:999px;
+  font-size:11px;letter-spacing:.18em;
+  transition:border-color .4s var(--ease),background .4s var(--ease),color .4s var(--ease);
+}
+.contacts a:hover,.contacts a:focus-visible{border-color:var(--gold-soft);background:var(--gold-soft);color:var(--ink)}
+.credit{
+  margin-top:clamp(40px,9vh,62px);
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+}
+.credit__n{font-family:var(--serif);font-size:clamp(19px,5vw,25px);letter-spacing:.02em}
+.credit__r{width:40px;height:1px;background:rgba(246,241,232,.28)}
+.credit__p{
+  font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;
+  color:rgba(246,241,232,.5);
+}
+.credit__p strong{color:var(--gold-soft);font-weight:400}
+
+/* ─────────── desktop ─────────── */
+@media (min-width:768px){
+  .split__in{max-width:min(46vw,560px);padding-bottom:clamp(80px,16vh,130px)}
+  .beat__in{max-width:min(52vw,620px)}
+  .close__in{padding-bottom:clamp(56px,10vh,80px)}
+}
+@media (min-width:1024px){
+  .hero__in{inset:auto auto 0 0;max-width:min(56vw,900px)}
+  .hero__names .amp{display:inline-block;font-size:.5em;margin:0 .16em}
+  .frame{height:min(72vh,720px)}
+  .reel__vp{overflow:hidden;scroll-snap-type:none}
+  .reel__track{padding:0 max(var(--gut),6vw)}
+  .reel__hint .d{display:inline}
+  .reel__hint .m{display:none}
+  .sched{grid-template-columns:1fr 1fr;column-gap:clamp(28px,4vw,54px)}
+  .invite__when span{max-width:none}
+}
+@media (hover:hover) and (min-width:1024px){
+  .frame__box{transition:transform .7s var(--ease)}
+  .frame:hover .frame__box{transform:translateY(-6px)}
+}
+
+/* ─────────── reduced motion / no-gsap fallback ─────────── */
+html.no-anim .wi{transform:none!important}
+html.no-anim .reveal{opacity:1!important;transform:none!important}
+html.no-anim .expand__frame{transform:none!important}
+html.no-anim .pause{height:auto}
+html.no-anim .pause__stick{position:static;height:auto;min-height:100svh}
+html.no-anim .expand{height:auto}
+html.no-anim .expand__stick{position:static;height:auto;min-height:100svh}
+html.no-anim .line{grid-area:auto;opacity:1!important}
+html.no-anim .pause__lines{position:absolute;align-content:center;gap:24px}
+html.no-anim .cue__bar i{animation:none;transform:none}
+html.no-anim .reel__vp{overflow-x:auto;scroll-snap-type:x mandatory}
+</style>
+</head>
+
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+<p class="badge is-hidden" id="badge" aria-hidden="true">Overture</p>
+
+<!-- ══════════ OVERTURE ══════════ -->
+<div class="overture" id="overture" aria-hidden="true">
+  <div class="overture__in">
+    <!-- EDIT: eyebrow -->
+    <span class="overture__eyebrow" id="ovEyebrow">The wedding of</span>
+    <!-- EDIT: initials -->
+    <div class="overture__mono"><span>A</span><em>&amp;</em><span>A</span></div>
+    <div class="overture__rule"><i id="ovRule"></i></div>
+  </div>
+</div>
+
+<main id="film">
+
+  <!-- ══════════ I · COLD OPEN — 01 (palace courtyard, epic scale) ══════════ -->
+  <section class="ch hero" data-theme="dark" data-chapter="Overture">
+    <div class="media media--tall" style="--tone-a:#e6e0d6;--tone-b:#b49879">
+      <img src="images/01.webp" alt="The couple seated in the courtyard of a sandstone palace in Orchha, she points towards the far wing" style="object-position:34% 62%" fetchpriority="high" decoding="async" id="heroImg">
+    </div>
+    <div class="scrim scrim--bottom"></div>
+    <div class="hero__in">
+      <!-- EDIT: names + date -->
+      <span class="mark" data-split>Together with our families</span>
+      <h1 class="hero__names">
+        <span data-split>Aarav</span>
+        <span class="amp" aria-hidden="true">&amp;</span>
+        <span data-split>Ananya</span>
+      </h1>
+      <p class="hero__date" data-split>Sunday · 22 November 2026 · Orchha</p>
+    </div>
+    <div class="cue" aria-hidden="true">
+      <span class="cue__l">Scroll</span>
+      <span class="cue__bar"><i></i></span>
+    </div>
+  </section>
+
+  <!-- ══════════ II · THE BEGINNING — 08 (terrace, empty left half for type) ══════════ -->
+  <section class="ch split" data-theme="dark" data-chapter="I · The Beginning">
+    <div class="media media--tall" style="--tone-a:#dccfbe;--tone-b:#a08d78">
+      <img src="images/08.webp" alt="The couple standing together on a palace terrace, looking at each other" style="object-position:76% 45%" loading="lazy" decoding="async">
+    </div>
+    <div class="scrim scrim--edge"></div>
+    <div class="split__in">
+      <!-- EDIT: story beat 1 -->
+      <span class="mark reveal">Chapter I</span>
+      <h2 class="display" data-split>It started with a conversation<br>that refused to end.</h2>
+      <p class="body reveal">Two cities, one long winter of phone calls, and the slow, ordinary discovery that home could be a person.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ III · THE LOOK — 02 (the closest frame in the set; image carries it, type stays out of the way) ══════════ -->
+  <section class="ch beat" data-theme="dark" data-chapter="II · The Look">
+    <div class="media media--tall" style="--tone-a:#e8e2d8;--tone-b:#b99b7e">
+      <img src="images/02.webp" alt="The couple laughing together, her arms around him, a palace dome rising behind" style="object-position:40% 38%" loading="lazy" decoding="async">
+    </div>
+    <div class="scrim scrim--bottom"></div>
+    <div class="beat__in">
+      <!-- EDIT: story beat 2 -->
+      <span class="mark reveal">Chapter II</span>
+      <h2 class="display" data-split>And then there was<br>this look.</h2>
+      <p class="body reveal">Somewhere between the courtyard and the dome, the deciding was already done.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ IV · THE PROMISE — 07 (hands, soft bokeh = safe for type) ══════════ -->
+  <section class="ch pause" data-theme="dark" data-chapter="III · The Promise">
+    <div class="pause__stick">
+      <div class="media" style="--tone-a:#f0e4d6;--tone-b:#d8c2ab">
+        <img src="images/07.webp" alt="Her hand resting in his open palm, a ring catching the light" style="object-position:55% 50%" loading="lazy" decoding="async">
+      </div>
+      <div class="scrim scrim--full"></div>
+      <div class="pause__lines">
+        <!-- EDIT: two-line couplet -->
+        <p class="line line--1" data-split>Of all the hands I could have held,</p>
+        <p class="line line--2" data-split>yours was the one that felt like arriving.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ V · THE YES — 03 (portrait twirl, native mobile frame) ══════════ -->
+  <section class="ch beat" data-theme="dark" data-chapter="IV · The Yes">
+    <div class="media media--tall" style="--tone-a:#efe7dc;--tone-b:#c2a686">
+      <img src="images/03.webp" alt="The bride mid-twirl under the palace arches, arms outstretched, laughing" style="object-position:center 44%" loading="lazy" decoding="async">
+    </div>
+    <div class="scrim scrim--bottom"></div>
+    <div class="beat__in">
+      <!-- EDIT: story beat 3 -->
+      <span class="mark reveal">Chapter IV</span>
+      <h2 class="display" data-split>She said yes,<br>and then she spun.</h2>
+      <p class="body reveal">Four hundred years of sandstone, and the courtyard had never held a lighter sound.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ VI · WEIGHTLESS — 06 (portrait lift) ══════════ -->
+  <section class="ch beat" data-theme="dark" data-chapter="V · Weightless">
+    <div class="media media--tall" style="--tone-a:#cfae90;--tone-b:#9b7358">
+      <img src="images/06.webp" alt="He lifts her off the ground in front of two carved arches" style="object-position:50% 48%" loading="lazy" decoding="async">
+    </div>
+    <div class="scrim scrim--bottom"></div>
+    <div class="beat__in">
+      <!-- EDIT: story beat 4 -->
+      <span class="mark reveal">Chapter V</span>
+      <h2 class="display" data-split>He lifted her<br>off the ground.</h2>
+      <p class="body reveal">Nothing about this place has ever looked so weightless.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ VII · THE DANCE — 05 (print → full bleed) ══════════ -->
+  <section class="ch expand" data-theme="dark" data-chapter="VI · The Dance">
+    <div class="expand__stick">
+      <div class="expand__frame" id="expandFrame">
+        <div class="media" style="--tone-a:#d9c3a6;--tone-b:#9a7f68">
+          <img src="images/05.webp" alt="He spins her through the palace corridor, her skirt flared wide" style="object-position:50% 54%" loading="lazy" decoding="async">
+        </div>
+        <div class="scrim scrim--bottom"></div>
+      </div>
+      <div class="expand__cap">
+        <!-- EDIT: dance caption -->
+        <h2 class="display sm" data-split>No music. No audience.</h2>
+        <p class="body reveal">Just a courtyard in Orchha and a very good reason to spin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ VII · THE REEL — all eight frames, uncropped ══════════ -->
+  <section class="reel" id="reel" data-theme="dark" data-chapter="The Reel">
+    <div class="reel__head">
+      <span class="mark reveal">The Reel</span>
+      <h2 class="display sm" data-split>Eight frames from<br>one afternoon.</h2>
+      <!-- EDIT: photographer credit -->
+      <p class="reel__by reveal">Photographed by <strong>Utsav</strong></p>
+    </div>
+
+    <div class="reel__vp" id="reelVp">
+      <div class="reel__track" id="reelTrack">
+
+        <figure class="frame frame--land">
+          <div class="frame__box"><img src="images/01.webp" alt="The couple seated in the palace courtyard" loading="lazy" decoding="async"></div>
+          <figcaption><b>01</b><span>Two thrones, one afternoon</span></figcaption>
+        </figure>
+
+        <figure class="frame frame--land">
+          <div class="frame__box"><img src="images/02.webp" alt="The couple laughing, foreheads close, palace dome behind" loading="lazy" decoding="async"></div>
+          <figcaption><b>02</b><span>The look that gave it away</span></figcaption>
+        </figure>
+
+        <figure class="frame frame--port">
+          <div class="frame__box"><img src="images/03.webp" alt="The bride mid-twirl beneath the arches" loading="lazy" decoding="async"></div>
+          <figcaption><b>03</b><span>Anarkali, mid-spin</span></figcaption>
+        </figure>
+
+        <figure class="frame frame--port">
+          <div class="frame__box"><img src="images/04.webp" alt="Her hands forming a heart against soft light" loading="lazy" decoding="async"></div>
+          <figcaption><b>04</b><span>A heart, held to the light</span></figcaption>
+        </figure>
+
+        <figure class="frame frame--land">
+          <div class="frame__box"><img src="images/05.webp" alt="The couple dancing in the palace corridor" loading="lazy" decoding="async"></div>
+          <figcaption><b>05</b><span>The courtyard, a dance floor</span></figcaption>
+        </figure>
+
+        <figure class="frame frame--port">
+          <div class="frame__box"><img src="images/06.webp" alt="He lifts her in front of the arches" loading="lazy" decoding="async"></div>
+          <figcaption><b>06</b><span>Weightless</span></figcaption>
+        </figure>
+
+        <figure class="frame frame--land">
+          <div class="frame__box"><img src="images/07.webp" alt="Her hand resting in his palm" loading="lazy" decoding="async"></div>
+          <figcaption><b>07</b><span>One ring, two palms</span></figcaption>
+        </figure>
+
+        <figure class="frame frame--land">
+          <div class="frame__box"><img src="images/08.webp" alt="The couple on the palace terrace in late light" loading="lazy" decoding="async"></div>
+          <figcaption><b>08</b><span>Terrace, late light</span></figcaption>
+        </figure>
+
+      </div>
+    </div>
+
+    <div class="reel__foot">
+      <span class="reel__count"><b id="reelIdx">01</b> &nbsp;/&nbsp; 08</span>
+      <span class="reel__bar"><i id="reelBar"></i></span>
+      <span class="reel__hint" aria-hidden="true"><span class="m">swipe →</span><span class="d">keep scrolling →</span></span>
+    </div>
+  </section>
+
+  <!-- ══════════ VIII · THE INVITATION ══════════ -->
+  <section class="invite" data-theme="light" data-chapter="The Invitation">
+    <div class="invite__card">
+      <span class="mark mark--ink reveal">Together with our families</span>
+
+      <!-- EDIT: names -->
+      <h2 class="invite__names">
+        <span data-split>Aarav</span>
+        <span class="amp" aria-hidden="true">&amp;</span>
+        <span data-split>Ananya</span>
+      </h2>
+
+      <div class="invite__orn reveal">
+        <svg class="orn" viewBox="0 0 140 12" aria-hidden="true">
+          <path d="M0 6h54M86 6h54" stroke="currentColor" stroke-width=".7" fill="none"/>
+          <path d="M70 1 75 6l-5 5-5-5z" stroke="currentColor" stroke-width=".7" fill="none"/>
+          <circle cx="70" cy="6" r="1.1" fill="currentColor"/>
+        </svg>
+      </div>
+
+      <p class="invite__say reveal">request the pleasure of your company as we begin our life together</p>
+
+      <!-- EDIT: date -->
+      <div class="invite__when reveal">
+        <span>Sunday</span>
+        <i></i>
+        <span class="invite__d">22</span>
+        <i></i>
+        <span>November 2026</span>
+      </div>
+
+      <!-- EDIT: venue -->
+      <p class="invite__venue reveal">
+        Jahangir Mahal Lawns
+        <span>Orchha · Madhya Pradesh</span>
+      </p>
+
+      <!-- EDIT: replace query with the real venue -->
+      <a class="ghost reveal" href="https://www.google.com/maps/search/?api=1&amp;query=Jahangir+Mahal+Orchha" target="_blank" rel="noopener">
+        Get directions
+        <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 12L12 4M6 4h6v6"/></svg>
+      </a>
+
+      <!-- EDIT: schedule -->
+      <div class="sched">
+        <div class="sched__row"><span class="sched__n">Mehendi</span><span class="sched__t">21 Nov · 5:00 pm</span></div>
+        <div class="sched__row"><span class="sched__n">Haldi</span><span class="sched__t">22 Nov · 9:00 am</span></div>
+        <div class="sched__row"><span class="sched__n">The Ceremony</span><span class="sched__t">22 Nov · 7:30 pm</span></div>
+        <div class="sched__row"><span class="sched__n">Reception</span><span class="sched__t">23 Nov · 8:00 pm</span></div>
+      </div>
+
+      <p class="dress reveal">Dress code · Ivory, black &amp; antique gold</p>
+    </div>
+  </section>
+
+  <!-- ══════════ IX · CLOSING FRAME — 04 (soft, bright, holds type) ══════════ -->
+  <section class="ch close" data-theme="dark" data-chapter="RSVP">
+    <div class="media media--tall" style="--tone-a:#f2ebe1;--tone-b:#d9c6b1">
+      <img src="images/04.webp" alt="Her hands forming a heart, softly lit" style="object-position:55% 42%" loading="lazy" decoding="async">
+    </div>
+    <div class="scrim scrim--bottom strong"></div>
+    <div class="close__in">
+      <!-- EDIT: rsvp -->
+      <span class="mark reveal">RSVP</span>
+      <h2 class="display sm" data-split>Kindly respond<br>by 1 November</h2>
+      <p class="body reveal">A message is all we need — we would love to know you are coming.</p>
+      <div class="contacts reveal">
+        <a href="tel:+910000000000">+91 00000 00000</a>
+        <a href="tel:+910000000000">+91 00000 00000</a>
+      </div>
+      <div class="credit reveal">
+        <span class="credit__n">Aarav &amp; Ananya</span>
+        <span class="credit__r"></span>
+        <span class="credit__p">Photography — <strong>Utsav</strong></span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+<script>
+(function(){
+  'use strict';
+  var root = document.documentElement;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── photos fade in over a tone-matched placeholder ── */
+  function liftImages(){
+    document.querySelectorAll('img').forEach(function(img){
+      if(img.complete && img.naturalWidth) img.classList.add('is-in');
+      else img.addEventListener('load', function(){ img.classList.add('is-in'); }, {once:true});
+    });
+  }
+  liftImages();
+
+  /* ── bail out gracefully if GSAP never arrived or motion is unwanted ── */
+  if(typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined' || reduced){
+    root.classList.add('no-anim');
+    var ov = document.getElementById('overture');
+    if(ov) ov.remove();
+    initReelCounter();
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ── word splitting for kinetic type (keeps <br> intact) ── */
+  function splitWords(el){
+    var nodes = Array.prototype.slice.call(el.childNodes);
+    el.innerHTML = '';
+    nodes.forEach(function(node){
+      if(node.nodeType === 3){
+        node.textContent.split(/(\s+)/).forEach(function(tok){
+          if(!tok.length) return;
+          if(!tok.trim()){ el.appendChild(document.createTextNode(' ')); return; }
+          var outer = document.createElement('span'); outer.className = 'w';
+          var inner = document.createElement('span'); inner.className = 'wi'; inner.textContent = tok;
+          outer.appendChild(inner); el.appendChild(outer);
+        });
+      } else {
+        el.appendChild(node.cloneNode(true));
+      }
+    });
+    return el.querySelectorAll('.wi');
+  }
+  document.querySelectorAll('[data-split]').forEach(splitWords);
+
+  /* ── smooth scroll (desktop wheel only — touch stays native) ── */
+  var lenis = null;
+  if(typeof window.Lenis !== 'undefined'){
+    lenis = new Lenis({ duration:1.15, smoothWheel:true, touchMultiplier:1.6 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(time){ lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  /* ── overture, then release the film ── */
+  var overture = document.getElementById('overture');
+  var badge = document.getElementById('badge');
+  root.classList.add('is-locked');
+  if(lenis) lenis.stop();
+
+  var intro = gsap.timeline({paused:true});
+  intro.to('#ovEyebrow', {opacity:1, duration:.9, ease:'power2.out'})
+       .to('.overture__mono span', {opacity:1, duration:1.1, stagger:.14, ease:'power2.out'}, '-=.5')
+       .to('.overture__mono em', {opacity:1, duration:.9, ease:'power2.out'}, '-=.7')
+       .to('#ovRule', {scaleX:1, duration:1.1, ease:'power2.inOut'}, '-=.7')
+       .to('.overture__in', {opacity:0, y:-14, duration:.7, ease:'power2.in'}, '+=.35')
+       .to(overture, {opacity:0, duration:.9, ease:'power2.inOut', onComplete:function(){
+          overture.remove();
+          root.classList.remove('is-locked');
+          if(lenis) lenis.start();
+          badge.classList.remove('is-hidden');
+          ScrollTrigger.refresh();
+          heroIn.play();
+       }}, '-=.15');
+
+  var settled = false;
+  function start(){ if(settled) return; settled = true; intro.play(); }
+  if(document.readyState === 'complete') start();
+  else window.addEventListener('load', start);
+  setTimeout(start, 2200);
+
+  /* ── hero entrance (held until the overture clears) ── */
+  var heroIn = gsap.timeline({paused:true});
+  heroIn.to('.hero .mark .wi', {y:0, duration:1, ease:'power3.out'})
+        .to('.hero__names .wi', {y:0, duration:1.35, stagger:.1, ease:'power3.out'}, '-=.75')
+        .from('.hero__names .amp', {opacity:0, duration:1.1, ease:'power2.out'}, '-=.95')
+        .to('.hero__date .wi', {y:0, duration:1, stagger:.03, ease:'power3.out'}, '-=.85')
+        .from('.cue', {opacity:0, duration:1, ease:'power2.out'}, '-=.7');
+
+  /* slow ken-burns on the opening frame */
+  gsap.to('#heroImg', {scale:1.09, duration:22, ease:'none', repeat:-1, yoyo:true});
+
+  /* ── parallax on every full-bleed frame ── */
+  gsap.utils.toArray('.media--tall').forEach(function(m){
+    var host = m.closest('.ch');
+    gsap.fromTo(m, {yPercent:-4}, {
+      yPercent:4, ease:'none',
+      scrollTrigger:{trigger:host, start:'top bottom', end:'bottom top', scrub:true}
+    });
+  });
+
+  /* ── type reveals, chapter by chapter ── */
+  gsap.utils.toArray('.split__in, .beat__in, .reel__head, .close__in, .invite__card').forEach(function(box){
+    var words = box.querySelectorAll('.wi');
+    var bits = box.querySelectorAll('.reveal');
+    var tl = gsap.timeline({scrollTrigger:{trigger:box, start:'top 82%', once:true}});
+    if(bits.length) tl.to(bits, {opacity:1, y:0, duration:1.1, stagger:.09, ease:'power3.out'}, 0);
+    if(words.length) tl.to(words, {y:0, duration:1.25, stagger:.055, ease:'power3.out'}, .1);
+  });
+
+  /* ── the promise: sticky frame, crossfading couplet ── */
+  var pause = document.querySelector('.pause');
+  if(pause){
+    var l1 = pause.querySelectorAll('.line--1 .wi');
+    var l2 = pause.querySelectorAll('.line--2 .wi');
+    var pt = gsap.timeline({scrollTrigger:{trigger:pause, start:'top top', end:'bottom bottom', scrub:1}});
+    pt.to(l1, {y:0, duration:1, stagger:.06, ease:'power2.out'})
+      .to('.line--1', {opacity:0, duration:.7, ease:'power1.inOut'}, '+=.9')
+      .to('.line--2', {opacity:1, duration:.5, ease:'power1.out'}, '-=.35')
+      .to(l2, {y:0, duration:1, stagger:.06, ease:'power2.out'}, '-=.45')
+      .to({}, {duration:.8});
+  }
+
+  /* ── the dance: framed print opens to full bleed ── */
+  var expand = document.querySelector('.expand');
+  if(expand){
+    gsap.to('#expandFrame', {
+      scale:1, ease:'none',
+      scrollTrigger:{trigger:expand, start:'top top', end:'65% bottom', scrub:.8}
+    });
+    var cap = expand.querySelector('.expand__cap');
+    gsap.timeline({scrollTrigger:{trigger:expand, start:'40% center', once:true}})
+      .to(cap.querySelectorAll('.wi'), {y:0, duration:1.2, stagger:.06, ease:'power3.out'})
+      .to(cap.querySelectorAll('.reveal'), {opacity:1, y:0, duration:1, ease:'power3.out'}, '-=.8');
+  }
+
+  /* ── the reel: pinned horizontal run on desktop, native swipe on phones ── */
+  var vp = document.getElementById('reelVp');
+  var track = document.getElementById('reelTrack');
+  var frames = track ? track.querySelectorAll('.frame') : [];
+
+  function paintReel(i){
+    var idx = document.getElementById('reelIdx');
+    var bar = document.getElementById('reelBar');
+    var n = Math.min(frames.length, Math.max(1, i + 1));
+    if(idx) idx.textContent = String(n).padStart(2, '0');
+    if(bar) bar.style.transform = 'scaleX(' + (n / frames.length) + ')';
+  }
+
+  var mm = gsap.matchMedia();
+
+  mm.add('(min-width: 1024px)', function(){
+    var reel = document.getElementById('reel');
+    var travel = function(){ return Math.max(0, track.scrollWidth - vp.clientWidth); };
+    gsap.to(track, {
+      x: function(){ return -travel(); },
+      ease:'none',
+      scrollTrigger:{
+        trigger:reel, start:'top top',
+        end:function(){ return '+=' + (travel() + window.innerHeight * 0.5); },
+        pin:true, scrub:.9, invalidateOnRefresh:true, anticipatePin:1,
+        onUpdate:function(self){ paintReel(Math.round(self.progress * (frames.length - 1))); }
+      }
+    });
+  });
+
+  mm.add('(max-width: 1023px)', function(){
+    initReelCounter();
+  });
+
+  function initReelCounter(){
+    var v = document.getElementById('reelVp');
+    var t = document.getElementById('reelTrack');
+    if(!v || !t) return;
+    var items = t.querySelectorAll('.frame');
+    var tick = function(){
+      var mid = v.scrollLeft + v.clientWidth / 2;
+      var best = 0, bestD = Infinity;
+      items.forEach(function(f, i){
+        var c = f.offsetLeft + f.offsetWidth / 2;
+        var d = Math.abs(c - mid);
+        if(d < bestD){ bestD = d; best = i; }
+      });
+      var idx = document.getElementById('reelIdx');
+      var bar = document.getElementById('reelBar');
+      if(idx) idx.textContent = String(best + 1).padStart(2, '0');
+      if(bar) bar.style.transform = 'scaleX(' + ((best + 1) / items.length) + ')';
+    };
+    v.addEventListener('scroll', function(){
+      window.requestAnimationFrame(tick);
+    }, {passive:true});
+    tick();
+  }
+
+  /* ── orientation chrome: progress line + chapter name, no header needed ── */
+  var bar = document.getElementById('progressBar');
+  ScrollTrigger.create({
+    start:0, end:'max',
+    onUpdate:function(self){ bar.style.transform = 'scaleX(' + self.progress + ')'; }
+  });
+
+  gsap.utils.toArray('[data-chapter]').forEach(function(sec){
+    ScrollTrigger.create({
+      trigger:sec, start:'top 58%', end:'bottom 58%',
+      onToggle:function(self){
+        if(!self.isActive) return;
+        badge.textContent = sec.getAttribute('data-chapter');
+        document.body.classList.toggle('theme-light', sec.getAttribute('data-theme') === 'light');
+      }
+    });
+  });
+
+  /* ── keep measurements honest as photos and fonts land ── */
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ ScrollTrigger.refresh(); });
+})();
+</script>
+</body>
+</html>
